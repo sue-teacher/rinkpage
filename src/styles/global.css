@@ -1,35 +1,34 @@
 /* ============================================================
    지수쌤 학습 허브 — 디자인 시스템
    ui-ux-pro-max 방법론 적용
-   스타일: "Soft Depth" — 깊이감 있는 다크 테마 + 금색 포인트
-   (kiro2 혁명 탐험대와 톤 일관성 유지)
+   스타일: "Sunny Warmth" — 밝은 햇살 라이트 테마 + 선셋 포인트
    ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap');
 
 :root {
   /* ── 배경 & 표면(명도 단계로 깊이 표현) ── */
-  --bg: #0b0f28;
-  --bg-soft: #141a40;
-  --surface-1: #1a2250;
-  --surface-2: #232c62;
-  --surface-3: #2d3878;
-  --border: #39448a;
-  --border-soft: rgba(255, 255, 255, 0.08);
+  --bg: #fff7ea;
+  --bg-soft: #fff0da;
+  --surface-1: #ffffff;
+  --surface-2: #fffaf1;
+  --surface-3: #fff2dd;
+  --border: #f3d9ad;
+  --border-soft: rgba(120, 72, 20, 0.12);
 
-  /* ── 텍스트 ── */
-  --text: #f3f6ff;
-  --text-dim: #b2bbec;
-  --text-faint: #7d87c4;
+  /* ── 텍스트 (따뜻한 브라운 계열, 대비 확보) ── */
+  --text: #4a2f16;        /* 본문 (크림 배경 위 대비 ≥ 9:1) */
+  --text-dim: #8a6a44;    /* 보조 (대비 ≥ 4.5:1) */
+  --text-faint: #a98a63;
 
-  /* ── 역할색 ── */
-  --accent: #ffd166;
-  --accent-deep: #f4b740;
-  --accent-glow: rgba(255, 209, 102, 0.35);
-  --good: #4ade9f;
-  --bad: #ff6b6b;
-  --info: #7aa2ff;
-  --violet: #b08dff;
-  --ink: #11162e;
+  /* ── 역할색 (햇살/선셋) ── */
+  --accent: #f59e0b;      /* 선셋 골드 */
+  --accent-deep: #e07b1a; /* 진한 주황 */
+  --accent-glow: rgba(245, 158, 11, 0.3);
+  --good: #22a06b;
+  --bad: #e4572e;
+  --info: #ef8f3b;
+  --coral: #f97362;
+  --ink: #3a2410;         /* 밝은 버튼 위 글자색 */
 
   /* ── 간격 스케일(4px 기반) ── */
   --space-1: 4px;
@@ -46,10 +45,10 @@
   --radius-lg: 24px;
   --radius-pill: 999px;
 
-  /* ── 그림자(엘리베이션) ── */
-  --shadow-1: 0 2px 10px rgba(0, 0, 0, 0.22);
-  --shadow: 0 12px 30px rgba(4, 7, 22, 0.5);
-  --shadow-2: 0 22px 50px rgba(4, 7, 22, 0.6);
+  /* ── 그림자(엘리베이션, 따뜻한 톤) ── */
+  --shadow-1: 0 2px 10px rgba(197, 120, 32, 0.12);
+  --shadow: 0 12px 30px rgba(197, 120, 32, 0.18);
+  --shadow-2: 0 22px 50px rgba(197, 120, 32, 0.22);
   --ring: 0 0 0 3px var(--accent-glow);
 
   --font-title: 'Jua', 'Pretendard', 'Gowun Dodum', sans-serif;
@@ -66,9 +65,9 @@ html, body, #root {
 
 body {
   background:
-    radial-gradient(1200px 600px at 12% -8%, #30409f 0%, rgba(48, 64, 159, 0) 58%),
-    radial-gradient(1000px 560px at 100% 0%, #4a2f8f 0%, rgba(74, 47, 143, 0) 55%),
-    radial-gradient(900px 700px at 50% 115%, #1a2a6b 0%, rgba(26, 42, 107, 0) 60%),
+    radial-gradient(1200px 620px at 12% -8%, #ffe4a8 0%, rgba(255, 228, 168, 0) 58%),
+    radial-gradient(1000px 560px at 100% 0%, #ffd0a0 0%, rgba(255, 208, 160, 0) 55%),
+    radial-gradient(900px 720px at 50% 118%, #ffe9c2 0%, rgba(255, 233, 194, 0) 60%),
     var(--bg);
   background-attachment: fixed;
   color: var(--text);
@@ -95,8 +94,8 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   left: -9999px;
   top: 0;
-  background: var(--accent);
-  color: var(--ink);
+  background: var(--accent-deep);
+  color: #fff;
   padding: var(--space-2) var(--space-4);
   border-radius: var(--radius-sm);
   z-index: 10;
@@ -133,28 +132,27 @@ a { color: inherit; text-decoration: none; }
   place-items: center;
   font-size: 50px;
   border-radius: 50%;
-  background: linear-gradient(150deg, var(--surface-3), var(--surface-1));
-  box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  background: linear-gradient(150deg, #fff6e4, #ffffff);
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.9);
   animation: avatar-pop 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
-/* 아바타 둘레의 그라데이션 링 */
+/* 아바타 둘레의 햇살 그라데이션 링 */
 .hub-avatar::before {
   content: '';
   position: absolute;
   inset: -4px;
   border-radius: 50%;
   padding: 4px;
-  background: conic-gradient(from 210deg, var(--accent), var(--violet), var(--info), var(--accent));
+  background: conic-gradient(from 210deg, var(--accent), var(--coral), var(--accent-deep), var(--accent));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  opacity: 0.9;
 }
 
 .hub-title {
   margin: 0;
   font-size: clamp(1.75rem, 6vw, 2.3rem);
-  background: linear-gradient(180deg, #ffffff 0%, var(--text-dim) 140%);
+  background: linear-gradient(100deg, var(--accent-deep) 0%, var(--coral) 60%, var(--accent) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -187,11 +185,11 @@ a { color: inherit; text-decoration: none; }
   cursor: pointer;
   transition: transform 0.14s ease, background 0.14s ease, color 0.14s ease, box-shadow 0.14s ease;
 }
-.filter-chip:hover { transform: translateY(-1px); background: var(--surface-2); color: var(--text); }
+.filter-chip:hover { transform: translateY(-1px); background: var(--surface-3); color: var(--text); }
 .filter-chip[aria-pressed='true'] {
   background: linear-gradient(180deg, var(--accent), var(--accent-deep));
   border-color: var(--accent-deep);
-  color: var(--ink);
+  color: #fff;
   font-weight: 700;
   box-shadow: 0 6px 18px var(--accent-glow);
 }
@@ -225,7 +223,7 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   padding: var(--space-4);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0)) ,
+    linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 250, 241, 0.9)),
     var(--surface-1);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
@@ -243,7 +241,7 @@ a { color: inherit; text-decoration: none; }
   width: 4px;
   background: var(--card-accent, var(--accent));
 }
-/* 호버 시 번지는 광택 */
+/* 호버 시 번지는 햇살 */
 .link-card::after {
   content: '';
   position: absolute;
@@ -258,11 +256,11 @@ a { color: inherit; text-decoration: none; }
   box-shadow: var(--shadow);
   border-color: var(--border);
 }
-.link-card:hover::after { opacity: 0.12; }
+.link-card:hover::after { opacity: 0.14; }
 .link-card:active { transform: translateY(-1px); }
 
 .link-card.is-soon {
-  opacity: 0.68;
+  opacity: 0.65;
   cursor: not-allowed;
 }
 .link-card.is-soon:hover { transform: none; box-shadow: var(--shadow-1); }
@@ -276,8 +274,8 @@ a { color: inherit; text-decoration: none; }
   place-items: center;
   font-size: 28px;
   border-radius: var(--radius-sm);
-  background: linear-gradient(150deg, var(--surface-3), var(--surface-2));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  background: linear-gradient(150deg, var(--surface-3), #fff);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 1px 3px rgba(197, 120, 32, 0.1);
 }
 
 .link-body {
@@ -299,6 +297,7 @@ a { color: inherit; text-decoration: none; }
   margin: 0;
   font-size: 1.18rem;
   font-family: var(--font-title);
+  color: var(--text);
 }
 
 .link-desc {
@@ -311,9 +310,9 @@ a { color: inherit; text-decoration: none; }
 .link-tag {
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--card-accent, var(--accent));
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid var(--border-soft);
+  color: var(--accent-deep);
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid var(--border);
   border-radius: var(--radius-pill);
   padding: 3px var(--space-2);
 }
@@ -321,7 +320,7 @@ a { color: inherit; text-decoration: none; }
 .link-badge-soon {
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--ink);
+  color: #fff;
   background: var(--text-faint);
   border-radius: var(--radius-pill);
   padding: 3px var(--space-2);
@@ -335,13 +334,13 @@ a { color: inherit; text-decoration: none; }
   height: 34px;
   border-radius: 50%;
   color: var(--text-faint);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(245, 158, 11, 0.1);
   font-size: 1.1rem;
   transition: transform 0.16s ease, color 0.16s ease, background 0.16s ease;
 }
 .link-card:hover .link-arrow {
   transform: translateX(3px);
-  color: var(--ink);
+  color: #fff;
   background: var(--card-accent, var(--accent));
 }
 

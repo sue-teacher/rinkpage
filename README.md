@@ -85,7 +85,7 @@ krio(rinktree)/
       └─ global.css        # 디자인 토큰 + 스타일
 ```
 
-## 메모
+## 등록된 링크
 
-- 기존 두 앱(세계대전, 혁명들)의 `url`은 아직 `example.com` 임시 주소입니다.
-  각 앱의 실제 Vercel 주소로 `src/data/links.js`에서 바꿔주세요.
+- 지수쌤과 전쟁 예언자 — https://world-war-prophet.vercel.app/
+- 지수쌤과 혁명 탐험대 — https://revolutions-omega.vercel.app/

@@ -26,7 +26,7 @@ export const links = [
     id: 'ww1',
     title: '지수쌤과 전쟁 예언자',
     description: '지도를 따라가며 배우는 제1차 세계대전 학습 게임',
-    url: 'https://example.com/ww1', // TODO: 실제 배포 주소로 교체하세요
+    url: 'https://world-war-prophet.vercel.app/',
     emoji: '🕯️',
     tag: '역사',
     accent: '#e8995a',
@@ -36,7 +36,7 @@ export const links = [
     id: 'revolution',
     title: '지수쌤과 혁명 탐험대',
     description: '세계를 바꾼 7개의 혁명을 탐험하는 역사1 복습 게임',
-    url: 'https://example.com/revolution', // TODO: 실제 배포 주소로 교체하세요
+    url: 'https://revolutions-omega.vercel.app/',
     emoji: '🗺️',
     tag: '역사',
     accent: '#ffd166',

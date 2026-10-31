@@ -27,7 +27,7 @@ export const links = [
     title: '지수쌤과 혁명 탐험대',
     description: '세계를 바꾼 7개의 혁명을 탐험하는 역사1 복습 게임',
     url: 'https://revolutions-omega.vercel.app/',
-    emoji: '🗺️',
+    emoji: '🔍',
     tag: '역사',
     accent: '#f5933a',
     status: 'live',

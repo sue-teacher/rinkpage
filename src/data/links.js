@@ -44,7 +44,7 @@ export const links = [
   },
   {
     id: 'ww2',
-    title: '지수쌤과 작전 지도실',
+    title: '지수쌤과 작전 브리핑',
     description: '제2차 세계대전',
     url: 'https://world-war-2.vercel.app/',
     emoji: '🗺️',

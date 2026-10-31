@@ -42,6 +42,16 @@ export const links = [
     accent: '#e05d3a',
     status: 'live',
   },
+  {
+    id: 'ww2',
+    title: '지수쌤과 작전 지도실',
+    description: '세계지도로 조사하고 순서를 복원하는 제2차 세계대전 학습 게임',
+    url: 'https://world-war-2.vercel.app/',
+    emoji: '🗺️',
+    tag: '역사',
+    accent: '#556b2f',
+    status: 'live',
+  },
 
   // ── 새 학습 웹앱을 여기에 추가하세요 ───────────────────────
   // {

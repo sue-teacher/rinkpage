@@ -25,7 +25,7 @@ export const links = [
   {
     id: 'revolution',
     title: '지수쌤과 혁명 탐험대',
-    description: '세계를 바꾼 7개의 혁명을 탐험하는 역사1 복습 게임',
+    description: '세계를 바꾼 7개의 혁명들',
     url: 'https://revolutions-omega.vercel.app/',
     emoji: '🔍',
     tag: '역사',
@@ -35,7 +35,7 @@ export const links = [
   {
     id: 'ww1',
     title: '지수쌤과 전쟁 예언자',
-    description: '지도를 따라가며 배우는 제1차 세계대전 학습 게임',
+    description: '제1차 세계대전',
     url: 'https://world-war-prophet.vercel.app/',
     emoji: '🕯️',
     tag: '역사',
@@ -45,7 +45,7 @@ export const links = [
   {
     id: 'ww2',
     title: '지수쌤과 작전 지도실',
-    description: '세계지도로 조사하고 순서를 복원하는 제2차 세계대전 학습 게임',
+    description: '제2차 세계대전',
     url: 'https://world-war-2.vercel.app/',
     emoji: '🗺️',
     tag: '역사',
